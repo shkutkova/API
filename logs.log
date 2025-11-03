@@ -1,0 +1,2 @@
+2025-11-03T15:36:49.387666+0300 | ERROR | Error in create_request_body : BaseModule.create_request_body() got an unexpected keyword argument 'data'
+2025-11-03T16:08:21.190532+0300 | ERROR | Error in create_url : BaseModule.create_url() missing 1 required positional argument: 'endpoint'
