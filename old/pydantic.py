@@ -1,8 +1,9 @@
 from dataclasses import Field
 
 import requests
-from pydantic import BaseModel      ''' BaseModel - мощная библиотека для валидации данных.
-                                Она проверяет, что ответ от сервера (JSON) совпадает с нужной структурой и типами.'''
+from pydantic import BaseModel
+# BaseModel - мощная библиотека для валидации данных.
+# Она проверяет, что ответ от сервера (JSON) совпадает с нужной структурой и типами.
 
 
 class UserRegisteredSchema(BaseModel): # Это модель(схема), описывающая какие поля ожидаются при регистрации клиента.

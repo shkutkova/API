@@ -1,6 +1,6 @@
 from pprint import pprint
 
-import requests     # requests — библиотека, с помощью которой Python отправляет HTTP-запросы (GET, POST и т.д.).
+import requests     # requests — библиотека HTTP-запросов (GET, POST и т.д.).
 
 def test_get_books():
     url = "https://simple-books-api.click/books"
@@ -15,7 +15,6 @@ def test_get_books1():
     response = requests.get(url)
     assert response.status_code == 200  # assert — это встроенная проверка в Python
                                         # Проверяет (через assert), что код ответа равен 200.
-
 
 def test_get_books2():
     url = "https://simple-books-api.click/books"
