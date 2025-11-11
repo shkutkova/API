@@ -1,6 +1,6 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class RegisteredRequestSchema(BaseModel):
-    clientName: str
-    clientEmail: str
+    client_name: str = Field(..., alias="clientName") 
+    client_email: str = Field(..., alias="clientEmail") 

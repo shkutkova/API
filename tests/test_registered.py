@@ -19,26 +19,26 @@ class TestRegistered:           # экземпляры всех вспомога
     assertion = Assertions()
 
     def test_registered_v1(self, request_body=None):
-        user_info = next(self.generator.registered_data()) # registered_data() — генератор, который выдаёт объект RegisteredDataClass.
+        user_info = next(self.generator.registered_data())
         request_body = self.module.prepare_data(
-            schema=RegisteredRequestSchema,
+            schema=RegisteredRequestSchema,     # импортируем схему запроса (name, email)
             data=user_info
         )
-        # Шаг 3 Отправка POST-запроса
-        # Формируется URL из базового адреса и пути (/api_client)
-        # Отправляется запрос с телом request_body
-        response = requests.post(
-            url=f'{self.endpoint.base_url}/{self.endpoint.api_client}',
-            data=request_body,
+        print(f"User info: {user_info}")
+        print(f"Request body: {request_body}")
+        
+        response = requests.post(       # Отправляем post запрос
+            url=f'{self.endpoint.base_url}/{self.endpoint.api_client}',     # < на этот URL
+            data=request_body,          # с телом request_body /\
         )
-        # Шаг 4 Валидация JSON-ответа
-        # Проверяет, соответствует ли ответ API схеме TokenResponseSchema (есть ли поле token в ответе)
-        self.validate.validate(
+        print(f"Response status: {response.status_code}")
+        print(f"Response text: {response.text}")
+        
+        self.validate.validate(         # Валидация JSON-ответа
             response=response,
-            schema=TokenResponseSchema,
+            schema=TokenResponseSchema,     # есть ли поле token в ответе по схеме TokenResponseSchema
         )
-        # Шаг 5 Проверка status code
-        self.assertion.assert_status_code(
+        self.assertion.assert_status_code(      # Проверка status code
             response=response,
             status_code=status.CREATED
         )

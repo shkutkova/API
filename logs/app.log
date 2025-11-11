@@ -1,0 +1,2 @@
+2025-11-11 17:54:03.915 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 400 статус 
+2025-11-11 17:56:49.685 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 400 статус 

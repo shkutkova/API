@@ -1,12 +1,12 @@
-
 from modules.base_module import BaseModule
-from utils.schemas.logger import log
-
+#from utils.schemas.logger import log
+from pydantic import Field 
+from loguru import logger
 
 class RegisteredModule(BaseModule):     # класс-наследник от BaseModule
-
-    @log
-    # Подготавливаем данные для запроса на основе схемы
+    # client_name: str = Field(..., alias="clientName")
+    # client_email: str = Field(..., alias="clientEmail")
+    
     def prepare_data(self, schema, data):   # создаёт тело для API-запроса регистрации,
                             # используя схему Pydantic (schema) и объект с данными (data).
         # Шаг 1. Вызов схемы

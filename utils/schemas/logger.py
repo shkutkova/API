@@ -3,13 +3,20 @@ from functools import wraps
 from loguru import logger
 
 logger.remove()
+#logger.add(
+    #sink = r"/Users/katarina/PycharmProjects/API/logs.log",
+    #level='INFO',
+    #format='{time} | {level} | {message}',
+    #rotation="10MB",
+    #retention="10 days"
+#)
 logger.add(
-    sink = r"/Users/katarina/PycharmProjects/API/logs.log",
-    level='INFO',
-    format='{time} | {level} | {message}',
-    rotation="10MB",
-    retention="10 days"
+    "logs/app.log",  # Относительный путь в проекте
+    rotation="10 MB",
+    retention="30 days",
+    level="INFO"
 )
+
 
 def log(func):
 

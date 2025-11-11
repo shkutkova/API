@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class TokenResponseSchema(BaseModel):
-    accessToken: str
+    access_token: str = Field(..., alias="accessToken")

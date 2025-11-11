@@ -9,9 +9,6 @@ class Validate:
     def validate(self, response, schema):
         """
         Валидирует тело ответа на основании переданной схемы
-        :param response: тело ответа
-        :param schema: схема для валидации
-        :return: bool
         """
         try:
             schema.model_validate(response.json())
