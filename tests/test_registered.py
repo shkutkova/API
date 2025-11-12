@@ -45,14 +45,17 @@ class TestRegistered:           # экземпляры всех вспомога
 
 
     def test_registered_v2(self):
-        request_boby = self.module.create_request_body(
+        request_body = self.module.create_request_body(
             schema=RegisteredRequestSchema,
             data_class_instance=next(self.generator.registered_data())
         )
+        print(f"Request body: {request_body}")
         response = requests.post(
             url=f'{self.endpoint.base_url}/{self.endpoint.api_client}',
-            data=request_boby,
+            data=request_body,
         )
+        print(f"Response status: {response.status_code}")
+        print(f"Response text: {response.text}")
         self.validate.validate(
             response=response,
             schema=TokenResponseSchema,
