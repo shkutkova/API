@@ -29,7 +29,7 @@ class TestRegistered:           # экземпляры всех вспомога
         
         response = requests.post(       # Отправляем post запрос
             url=f'{self.endpoint.base_url}/{self.endpoint.api_client}',     # < на этот URL
-            data=request_body,          # с телом request_body /\
+            data=request_body          # с телом request_body /\
         )
         print(f"Response status: {response.status_code}")
         print(f"Response text: {response.text}")
