@@ -1,2 +1,10 @@
 2025-11-11 17:54:03.915 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 400 статус 
 2025-11-11 17:56:49.685 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 400 статус 
+2025-11-13 18:06:26.058 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 401 статус 
+2025-11-13 18:10:24.043 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 401 статус 
+2025-11-13 18:13:41.267 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 401 статус 
+2025-11-13 18:14:30.454 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 401 статус 
+2025-11-13 18:15:28.001 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 401 статус 
+2025-11-13 18:17:13.095 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 400 статус 
+2025-11-14 21:58:49.027 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 200 статус 
+2025-11-14 22:01:20.434 | ERROR    | utils.schemas.logger:wrapper:28 - Error in assert_status_code : Неверный статус код. Ожидали 201 статус, получили 200 статус 

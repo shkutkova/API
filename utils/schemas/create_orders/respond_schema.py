@@ -1,6 +1,13 @@
 from pydantic import BaseModel
 
 
-class CreateOrderdRespondSchema(BaseModel):
+class CreateOrdersRespondSchema(BaseModel):
     created: bool
     orderId: str
+
+class OneOrderRespondSchema(BaseModel):
+    id: str
+    bookId: int
+    customerName: str
+    quantity: int
+    timestamp: int

@@ -15,3 +15,6 @@ class RegisteredModule(BaseModule):     # класс-наследник от Bas
             clientEmail=data.clientEmail
         ).model_dump_json(by_alias=True)    # Шаг 2. Превращение в JSON
         return prepare_data
+
+    def create_order(self, schema, data):
+        pass
